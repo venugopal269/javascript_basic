@@ -221,6 +221,16 @@ console.log(clone3,"clone3");
  const course = courses.find(course => course.name==="js")
 console.log(course);
 
-  
+let arr2 = [1, 2, 3, 4, 5, 6];
 
- 
+arr2.pop(); 
+arr2.shift();
+arr2.splice(1,1)
+
+console.log(arr2); 
+
+const numb = [1,2,3]
+const numb1 = [4,5,6]
+
+const result = numb.concat(numb1)
+console.log(result);
