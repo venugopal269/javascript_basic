@@ -233,4 +233,121 @@ const numb = [1,2,3]
 const numb1 = [4,5,6]
 
 const result = numb.concat(numb1)
-console.log(result);
+console.log(result); 
+
+console.log(numb.indexOf(3));
+
+
+// function arguments
+ function sum(){
+    let total = 0;
+    for(let value of arguments){
+        total += value
+    }
+    return total;
+ };
+ console.log(sum(2,3,4,5,6,9));
+
+function em(discount,...args){
+    const total = args.reduce((a,b)=> a+b)
+ return total * (1-discount)
+}
+console.log(em(0.19,20,30,50));
+
+
+const per1 = {
+    firstName:"venu",
+    lastName:"gopal",
+   get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value){
+       const parts = value.split(" ");
+       this.firstName=parts[0];
+       this.lastName=parts[1]
+    }
+}
+per1.fullName = "hello world"
+console.log(per1);
+
+
+function sum(...items){
+    console.log(...items);
+    if(items.length===1 && Array.isArray(items[0]))
+        items = [...items[0]]
+    console.log(items);
+    
+return items.reduce((a,b)=>a+b)
+}
+
+console.log(sum([1,2,4]));
+
+const circle4 = {
+    radius:1,
+    get area(){
+        return Math.PI*this.radius*this.radius
+    }
+}
+console.log(circle4.area);
+
+
+    function arrayInRange(min,max){
+        const output = [];
+        for (let i = min; i<=max; i++)
+            output.push(i);
+        return output;
+          
+        
+           
+        
+    }
+
+    console.log(arrayInRange(10,15))
+
+
+
+    const numbe = [1,2,3,4]
+console.log(includes(numbe,2))
+
+    function includes(numbe,searchelement){
+      for (let i =0; i<numbe.length;i++){
+
+        let element = numbe[i]
+        console.log(element)
+        if(element === searchelement){
+
+            return true;
+        }
+    }
+    return false;
+    }
+
+    console.log(exclude(numbe,[1,3]))
+
+    function exclude(numbe,excludeElement){
+       const ouput =[];
+
+       for (let elements of numbe)
+        if(!excludeElement.includes(elements))
+            ouput.push(elements);
+
+        
+    
+        return ouput;
+       
+    }
+
+// console.log(exclude(numbe, [1, 3]));
+
+// function exclude(numbe, excludeElement) {
+//     const output = [];
+
+//     for (let element of numbe) {
+//         if (!excludeElement.includes(element)) {
+//             output.push(element); // Add element to output if it's not in excludeElement
+//         }
+//     }
+
+//     return output;
+// }
+   
