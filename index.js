@@ -306,8 +306,8 @@ console.log(circle4.area);
 
 
 
-    const numbe = [1,2,3,4]
-console.log(includes(numbe,2))
+     const numbe = [1,2,3,4]
+    console.log(includes(numbe,2))
 
     function includes(numbe,searchelement){
       for (let i =0; i<numbe.length;i++){
@@ -322,7 +322,7 @@ console.log(includes(numbe,2))
     return false;
     }
 
-    console.log(exclude(numbe,[1,3]))
+    console.log(exclude(numbe,[1]))
 
     function exclude(numbe,excludeElement){
        const ouput =[];
@@ -337,17 +337,32 @@ console.log(includes(numbe,2))
        
     }
 
-// console.log(exclude(numbe, [1, 3]));
+    const numberss = [1,2,3,4]
+    
+    function move(numberss,index,offset){
+        console.log(numberss);
+        
+        const output = [...numberss]
+        console.log(output,"output");
+        
+       const element= output.splice(index,1)[0]
+       console.log(element);
+       
+        output.splice(index+offset,0,element)
+        return output;
+    }
+    const data1 = move(numberss,0,3)
+console.log(data1);
 
-// function exclude(numbe, excludeElement) {
-//     const output = [];
 
-//     for (let element of numbe) {
-//         if (!excludeElement.includes(element)) {
-//             output.push(element); // Add element to output if it's not in excludeElement
-//         }
-//     }
+function neaaa(...num){
+  let a = [...num]
+  console.log(a);
+  
+  let b = {...a}
+  return b;
+}
 
-//     return output;
-// }
-   
+console.log(neaaa([1,2,3]));
+
+
