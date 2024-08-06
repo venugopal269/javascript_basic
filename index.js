@@ -364,5 +364,184 @@ function neaaa(...num){
 }
 
 console.log(neaaa([1,2,3]));
+n = [1,2,3,4,1,1]
+const count = countOccurrence(n,1)
+console.log(count);
+
+function countOccurrence(array,searchElement){
+    
+    let output = 0;
+
+    for(let element of array)
+        if(element==searchElement)
+            output++;
+    
+   return output;
+}
+
+const max = getMax(n);
+
+console.log(max);
+
+function getMax(array){
+   return array.reduce((a,b)=> (a>b)?a:b);
+}
+
+ const movies = [
+    {title:"a",year:2018,rating:4.5},
+    {title:"b",year:2018,rating:4.7},
+    {title:"c",year:2018,rating:4},
+    {title:"d",year:2017,rating:4.5},
+]
+const titles = movies
+.filter(m => m.year === 2018 && m.rating > 4)
+.sort((a,b)=>a.rating-b.rating)
+.reverse()
+.map(m=>m.title)
+console.log(titles);
+
+let address1={
+  street:"no 17",
+  city:"villupuram",
+  zipcode:605603
+};
+
+function showaddress(address1){
+    for(let key in address1)
+        console.log(key,address1[key]);
+        
+}
+showaddress(address1)
+
+const out= fizzBuzz(15)
+console.log(out)
+function fizzBuzz(input){
+    if((input%3===0) && (input%5===0)){
+        return "FizzBuzz"
+       }
+   if(input%3===0){
+    return "Fizz"
+   }
+   if(input%5===0){
+    return "Buzz"
+   }
+ return input;
+   
+}
+checkSpeed(110)
+function checkSpeed(speed){
+    const speedLimit = 70;
+    const kmPerPoint = 5;
+ if(speed < speedLimit+kmPerPoint){
+    console.log("ok");
+    
+ }else{
+    const point = Math.floor((speed-speedLimit)/5);
+    if(point >=12){
+        console.log("License suspended");
+        
+    }else{
+        console.log("points:",point);
+        
+    }
+ }
+
+}
+
+function showNumbers(limit){
+
+    for (let i =0; i <=limit;i++){
+        if(i%2===0){
+            console.log(i,"EVEN")
+        }else{
+            console.log(i,"ODD");
+            
+        }
+    }
+}
+showNumbers(10)
+
+const mov = {
+    title:"a",
+    releaseYear :2018,
+    rating:4.5,
+    director:"b"
+}
 
 
+showprop(mov)
+function showprop(mov){
+ for (const element in mov) {
+    if(typeof mov[element]==='string') {
+        console.log(element,mov[element]);
+    }
+ }
+ 
+}
+console.log(sumofNum(10))
+function sumofNum(limit){
+    let add = 0
+    for (let i = 1; i<=limit;i++)
+       if(i%3===0 || i%5===0)
+        add+=i
+    return add;
+}
+
+const mark = [80,90,80]
+
+console.log(calculate(mark))
+
+function calculate(mark){
+    let total = mark.reduce((a,b)=>a+b)
+    let avg = total/mark.length
+    if (avg >= 0 && avg <= 59) return "F"
+    if (avg >= 60 && avg <= 69) return "D"
+    if (avg >= 70 && avg <= 79) return "C"
+    if (avg >= 80 && avg <= 89) return "B"
+    return "A"
+}
+
+showStart(5);
+
+// function showStart(rows) {
+//     for (let i = 1; i <= rows; i++) {
+//         pattren = ""
+//         for(let j=0; j <= i;j++){
+//             pattren += "*"
+//         }
+//         console.log(pattren);
+        
+//     }
+// }
+
+// function showStart(rows) {
+//     for (let i = 0; i <= rows; i++) {
+//         pattren = ""
+//         for(let j=rows; j > i; j--){
+//             pattren += "*"
+//         }
+//         console.log(pattren);
+//     }
+// }
+
+// function showStart(rows){
+//     for (let i = 1; i <= rows; i++) {
+//         star = "*"
+//         space = " "
+//         pattern =""
+        
+//         for(let k=1; k <= 4-i; k++ ){
+//             pattern += space
+            
+//         }
+//         for (let l = 1; l < i1; l++) {
+//             pattern += star
+//         }
+//        console.log(pattern);
+        
+//     } 
+// }
+
+// function showStart(rows){
+    
+// }
